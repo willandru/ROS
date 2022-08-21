@@ -1,0 +1,88 @@
+mkdir ~p ras/src
+
+cd ras 
+
+catkinmake
+
+source /opt/ros/kinetic/setup.bash
+
+source ~/catkin_ws/devel/setup.bash
+
+
+
+MAESTRO: Nos va a poder comunicarnos con los robots y los nodos
+NODO: Pequeña unidad de ejecuccion para hacer un trobot
+PAQUETE: donde van a cargar todos los nodos para trabajar con ROS
+MENSAJES: 3 versiones 
+TOPICOS: Como el topico en una conversacion, ejempo el asunto de un mensaje .Funciona como publicacdor y como subscriptor. eNVIO UN MSM NO ME IMPORTA QUIN L RECIBA (PUBLICADOR). lAS PERSONAS QUE NECESITAN LEER ESA PUBLICACION LO QUE NECESITAN ES SIBSCURBURSE
+SERVICIOS: Es la forma sincronica de enviar un msms, diferenciadod e topicos porque es bidireccional. Un Servidor que envia un msm, y cualquier cliente que quiera recebirlo tiene que enviar un aknoledge
+ACCIONES: Mas complejos que los servicios, pero se hace de forma aasyncrona. es decir envio un msm sigocon mi vida, y mientras el liente manda todos los msm que quiera
+sibncronico: eMISOR Y RECEPTOR CONECRTADOS AL MISMO TIEMPO.
+
+PARAEMTROS: De las herramientas mas imporatens en ROS. Uds hacen un programma para mover un robot, haciendo dierentes funciones para un robot de 2 llantas, 3 llantas y 4 llantas. Mediante los parametros, uds parametriaz o distinguir que funcione queire utilizar. Sirve para escoger el movimiento que uqiere havecer para calcular el movimiento de cinematica
+
+CATKIN: el sistema que permite configrar o complilar en ROS
+
+
+roscore: es el nodo MAESTRO. SIn el roscore no podemos o comenzar. El es elncargado de permitir la comiunicacion entre nodos topicos y servicios. 
+
+rosrun: Correr o ejecutrar un nodo
+
+roslaunch: Les permite cargar multiples nodos con multiples parametros, multiples varoiables.
+
+bag: Es una bolsa que permite recompilar toda la informacion y guardarla. Yo tengo mi robot que se fue moviendo por todo el LABA, ahí en ese bag yo guarde la informacinon del movimiento, de los senores, actuadores y los nodos que uds implementaron. Bolsa para grabar/guardar los topicos.
+
+CMakeList.txt: Catkin funciona con Cmake, es la inrefaza para compilar todos los archivos qu enecesitan er compilados.
+
+roscd
+rosls
+rosed
+roscp
+rospd
+rosd
+para buscar archivos:
+comandos de ejecucion:
+
+roscore
+rosrun
+roslaunch 
+rosclean
+
+lienas de informacion:verificar leer la infromacionq ue estamos ransmitiendo
+
+rostopic: verificar la info 
+rosservice: verificar 
+rosnde: verificar
+rosparam: vevrificar
+rosbag: verificafr
+rosmsg:
+rosversion
+
+crear sus propios mensajes y servicios
+
+Como es el servicio y como viene el servicio: el canal
+
+COmo es el msm y como viene
+
+Para crear un paquete de manera autimatica: catkin_create_pkg
+catkin_make
+Para crear un paquete de manera autimatica: catkin_create_pkg
+catkin_make
+
+
+
+rosrun[package_name][name_folder]
+
+
+
+rostopic echo [name of topic]
+rostopic list -v
+rostopic type [name of topic]
+rostoic pub [name of ][msg_type]{}
+
+rosrun rqt_plot rqt_plot
+
+rosservice list
+rosservice call [service]
+
+rosnode list
