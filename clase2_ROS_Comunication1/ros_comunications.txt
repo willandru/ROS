@@ -41,3 +41,43 @@ std_msgs -> encargado de enviar variables primitivas
 Despues de crear un paquete, se BUILDEA:
 
 catkinmake
+
+
+PACKAGE.xml: Descripcion basica de su paquete, mostrar Autor, DESCRIPCION QUE VA HACER, dEPENDENCIAS QUE TIENE:
+
+CmakeLists.txt: Muy importante: 
+Lo primero que tiene son los paquetes que van a incluir:: van a quedar los mensajes y las dependencias
+Otra parte es:Como crear mensajes y servicios
+Luego: Las dependencias de los mensajes que se generan
+generate msg y katkinpackage: INcluyen toda la generacion de  mensajes.
+
+Por ultimo: Si crean un archivo de C++, para poner las herramientas de ejecucion.Desde python no es neesario.
+
+CREAR EL NODO PUBLICADOR Y EL NODO SUBSCRIPTO (PYTHON):
+
+workspace/
+	source/pkg_name: Crear diferentes folders
+
+1. Los mensajes, si no te satisfacen los que te da ROS. lOS Puedes dcrear tu (msg, srv):: Crear una carpeta msg, srv
+2. Necesitan lanzar diferentes ejecutables, es decir correr de manera simultanea varios nodos: necesiamos carpeta Launch
+3. Herramientass de simulacion:: sim
+4. Formas y diseños del robot: shapes(simulacion, como esta construido, guardar los archivos y codigos de c++ y pyhton)
+
+
+Para C++ la herramienta siempre va a ser SRC
+Para los headers de C++: INCLUDES
+
+Para PYTHON: SCRIPT
+
+5. Mundos(WORLD), y conjunto de instucciones.
+
+SIEMPRE QUE CREE UN PAQUETE CREAR FODLERS: src, scripts
+
+COmo definir un rospy.Publisher( Name, tipo_mensaje, tamaño_cola_datos)
+
+rospy.Publisher('chatter', String, queue_size=10)
+
+mensaje -> .msg
+
+Python va apublicar un String:
+from std_msgs import String
