@@ -1,0 +1,43 @@
+NOdo publicador: Encargado de abrir el mensaje.
+
+Ejemplo, este nodo va a ser el periodico el TIempo que va a dar noticias . Tasmite noticias a todo el muundo
+
+NODO SUBSCRIPTOR: El que paga la cuota para tener acceso a todos los mensajes.
+
+TOPICO: Es el medio de comunicacion para comunicarse 
+
+Un nodo publica y otro se comunica. por medio de un topico.
+
+El nodo subscriptor, se subscribe al ROS MASTER sobre el NODO PUBLICADOR. 
+El nodo publicador le envia el mensaje al ROS TOPIC, y este se lo envia al subsriptor.
+
+
+¿Qué se publica?
+1. Mensaje sprimitivos: Tibos de datos basicos: Booleano, entero, flotante,String
+2. Las cadenas: FLoat64, Double64, ....
+3. Mensajes complejos: twists o un gometry msg
+
+:
+
+
+rosrun turtleim : corre el paquete del turtlesim, que guarda todos los archivos
+
+COMO CREAR UN PAQUETE:
+
+catkin-> Herramienta para buildiar o cargar Ros configuartions.
+
+catkin_create_pkg -> 
+	parametros: nombredelPaquete Dependencias_queNecesita.
+	Dependencias: todos los paquetes, datos o informacion necesarios para crear el paquete.
+
+ROS: C++ y Python -> roscpp rospy
+
+
+catkin_create_pkg topics_ras rospy roscpp std_msgs
+
+Library: standar mssg: TIenen las variables primitivas:
+std_msgs -> encargado de enviar variables primitivas
+
+Despues de crear un paquete, se BUILDEA:
+
+catkinmake
