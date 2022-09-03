@@ -1,0 +1,69 @@
+Vamos a crear servicios
+Vamos a jugar con las tortugas
+
+TEMA: SERVICIOS
+
+no publicador y subscritptor
+
+tenemos un cliente y un servidor
+
+Servicio: Es un tipo de comunicacion Syncrono que nos permite hacer la comunicacion entre 2 nodos.
+
+Cliente:
+Servidor: Alguien que tiene un proceso que tiene escrito algo, que no hace nada asta que no venga alguien, necesita del cliente para hacer algo.
+El servidor es el ecargado de ejecutar ago como una suma por eejemplo , la suma de A con B.
+
+Para eso esta el cliente para ejecutar la suma: El pasa los aprametros.
+
+Se hace una comunicacion 
+
+El cliente enviía : suma(a+b)
+
+response:
+
+mensaje: profe necesito que me ayude a pasar con 3.0
+response: pasa o no pasa la materia
+
+
+YO envio un mensaje y espero una respuesta
+
+:: PRACTICA :: 
+
+'.srv' : is a file with the message used by services.
+
+necesitamos en nuestro paquete 'srv'
+
+crear un nuevo paquete: 'ras_services'
+trabajar sobre el paquete de la clase pasada:
+
+
+PASOS PARA CREAR UN SERVICIO:
+
+1. Crear en su paquete la carpeta donde almacenan todas las descripciones de los servicios 'srv'
+
+2. Agreagar un servicio 
+
+Un dato es lo que yo envio y otro dato es el Aknowledge:
+Los datos que voy a enviar(a,b) y voy a recibir la suma: COmo los diferencio
+
+
+a
+b
+---
+suma
+
+
+ahí acabo de crear mi primer tipo de mensaje, para que lo entiendan mi ROS
+
+
+- #!/usr/bin/python3
+
+- rospy.init_node('name of node')
+
+- rospy.spin()
+
+- From your_package.srv import NameSrv, NameSrvResponse
+- from ras_services.srv import addTwoInts, addTwoIntsResponse
+
+- rospy.service(name_service, TypeService, callback)
+
